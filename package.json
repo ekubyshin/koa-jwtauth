@@ -1,0 +1,33 @@
+{
+  "name": "koa-jwtauth",
+  "version": "1.0.0",
+  "description": "JSONWebtoken middleware for koa@2",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
+    "install": "node ./node_modules/babel-cli/bin/babel lib/index.js -o bin/index.js"
+  },
+  "keywords": [
+    "koa",
+    "jsonwebtoken",
+    "jwt"
+  ],
+  "author": "Evgeniy Kubyshin",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-2": "^6.13.0",
+    "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
+    "es6-promise": "^3.2.1",
+    "jsonwebtoken": "^7.1.9",
+    "mocha": "^3.0.2"
+  }
+}
