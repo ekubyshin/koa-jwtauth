@@ -1,9 +1,9 @@
 # koa-jwtauth
 JSONWebtoken middleware for koa@2
 
-This middleware watch for authorization header and set user data from jwt token to ctx.state if header is exists.
+This middleware watches for the authorization header and sets user data from jwttoken to ctx.state if the header exists.
 
-Middleware can throw an Forbidden error and prevent next middleware execution or silently call next middleware.
+Middleware can throws the Forbidden error and prevents next middleware execution or silently calls next middleware.
 
 #Usage:
 
