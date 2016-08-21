@@ -1,6 +1,6 @@
 {
   "name": "koa-jwtauth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSONWebtoken middleware for koa@2",
   "main": "bin/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ekubyshin/koa-jwtauth"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
