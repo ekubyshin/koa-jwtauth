@@ -10,7 +10,7 @@ Middleware can throws the Forbidden error and prevents next middleware execution
     import jwtmiddleware from 'koa-jwtauth'
     import {createHash} from 'crypto'
 
-    const securityToken = createHash('md5').update('Some salt').digest('hext');
+    const securityToken = createHash('md5').update('Some salt').digest('hex');
     
     //silent
     app.use(jwtmiddleware(securityToken));
