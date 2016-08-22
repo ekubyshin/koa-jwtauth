@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _jsonwebtoken = require('jsonwebtoken');
 
 var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
@@ -20,8 +22,11 @@ function resolveAuthorizationHeader(header) {
     var parts = header.authorization.split(' ');
 
     if (parts.length === 2) {
-        var scheme = parts[0];
-        var credentials = parts[1];
+        var _parts = _slicedToArray(parts, 2);
+
+        var scheme = _parts[0];
+        var credentials = _parts[1];
+
 
         if (/^Bearer$/i.test(scheme)) {
             return credentials;
@@ -66,7 +71,7 @@ exports.default = function (securityToken) {
                             return next();
 
                         case 9:
-                            _context.next = 20;
+                            _context.next = 25;
                             break;
 
                         case 11:
@@ -89,15 +94,24 @@ exports.default = function (securityToken) {
                             return next();
 
                         case 17:
-                            _context.next = 20;
+                            _context.next = 25;
                             break;
 
                         case 19:
-                            if (throw403) {
-                                ctx.throw(403);
+                            if (!throw403) {
+                                _context.next = 23;
+                                break;
                             }
 
-                        case 20:
+                            ctx.throw(403);
+                            _context.next = 25;
+                            break;
+
+                        case 23:
+                            _context.next = 25;
+                            return next();
+
+                        case 25:
                         case 'end':
                             return _context.stop();
                     }
