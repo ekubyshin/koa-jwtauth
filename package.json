@@ -1,6 +1,6 @@
 {
   "name": "koa-jwtauth",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "JSONWebtoken middleware for koa@2",
   "main": "bin/index.js",
   "scripts": {
